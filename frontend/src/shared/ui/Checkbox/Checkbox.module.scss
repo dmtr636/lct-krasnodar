@@ -1,0 +1,66 @@
+.checkboxContainer {
+    width: 24px;
+    height: 24px;
+
+    svg path {
+        fill: var(--black-primary-pale);
+    }
+}
+.checkboxContainerActive {
+    width: 24px;
+    height: 24px;
+    svg path {
+        fill: #14214d;
+    }
+}
+.checkboxBlock {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    display: flex;
+    margin-left: -7px;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: var(--white-primary-hover);
+    }
+}
+.checkbox {
+    cursor: pointer;
+    display: inline-flex;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    //styleName: Button/ButtonContainedOutlined;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: var(--black-primary-active);
+    flex-direction: row-reverse;
+    &:hover {
+        color: var(--black-primary-active);
+        .checkboxBlock {
+            background-color: var(--white-primary-hover);
+        }
+        .checkboxContainer {
+            svg path {
+                fill: color-mix(in oklab, #14214d, white 33%);
+            }
+        }
+        .checkboxContainerActive {
+            svg path {
+                fill: color-mix(in oklab, #14214d, white 33%);
+            }
+        }
+    }
+    &.active {
+        color: #14214d;
+        &:hover {
+            color: color-mix(in oklab, #14214d, white 33%);
+        }
+    }
+}
